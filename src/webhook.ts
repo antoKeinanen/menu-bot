@@ -1,6 +1,6 @@
 import { WebhookClient } from "discord.js";
 import { Menu, Restaurant } from "./types";
-import { tagEmojis } from "./config";
+import { botConfig, config, tagEmojis } from "./config";
 import { splitMessage } from "./util";
 
 export async function sendMenuWebhook(menu: Menu[], restaurant: Restaurant) {
@@ -19,7 +19,11 @@ export async function sendMenuWebhook(menu: Menu[], restaurant: Restaurant) {
   const url = process.env[`${name}_WEBHOOK`]!;
   const webhookClient = new WebhookClient({ url });
   for (const msg of messages) {
-    await webhookClient.send({ content: msg });
+    await webhookClient.send({
+      content: msg,
+      avatarURL: botConfig.avatarURL,
+      username: botConfig.username,
+    });
   }
 }
 

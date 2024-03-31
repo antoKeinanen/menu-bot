@@ -1,5 +1,10 @@
 import { IConfig, ParseMode } from "./types";
 
+export const botConfig = {
+  username: "Menu Bot",
+  avatarURL: "https://github.com/antoKeinanen/menu-bot/blob/main/img/pot_of_food.png?raw=true",
+}
+
 // Get the id by typing \:emojiName: in discord
 export const tagEmojis: Record<string, string> = {
   m: "<:maidoton:1223943979557715999>",

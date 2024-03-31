@@ -10,6 +10,25 @@ jobs:
     name: Run Bun Start
     runs-on: ubuntu-latest
 
+    env:
+      CHEMICUM_WEBHOOK: ${{ secrets.CHEMICUM_WEBHOOK }}
+      PHYSICUM_WEBHOOK: ${{ secrets.PHYSICUM_WEBHOOK }}
+      EXACTUM_WEBHOOK: ${{ secrets.EXACTUM_WEBHOOK }}
+      PORTAALI_WEBHOOK: ${{ secrets.PORTAALI_WEBHOOK }}
+      KAISA_WEBHOOK: ${{ secrets.KAISA_WEBHOOK }}
+      KAIVOPIHA_WEBHOOK: ${{ secrets.KAIVOPIHA_WEBHOOK }}
+      METSATALO_WEBHOOK: ${{ secrets.METSATALO_WEBHOOK }}
+      OLIVIA_WEBHOOK: ${{ secrets.OLIVIA_WEBHOOK }}
+      PORTHANIA_WEBHOOK: ${{ secrets.PORTHANIA_WEBHOOK }}
+      ROTUNDA_WEBHOOK: ${{ secrets.ROTUNDA_WEBHOOK }}
+      SOCKOM_WEBHOOK: ${{ secrets.SOCKOM_WEBHOOK }}
+      TOPELIAS_WEBHOOK: ${{ secrets.TOPELIAS_WEBHOOK }}
+      MEILAHTI_WEBHOOK: ${{ secrets.MEILAHTI_WEBHOOK }}
+      BIOKESKUS3_WEBHOOK: ${{ secrets.BIOKESKUS3_WEBHOOK }}
+      INFOKESKUS_WEBHOOK: ${{ secrets.INFOKESKUS_WEBHOOK }}
+      TAHKA_WEBHOOK: ${{ secrets.TAHKA_WEBHOOK }}
+      VIIKUNA_WEBHOOK: ${{ secrets.VIIKUNA_WEBHOOK }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

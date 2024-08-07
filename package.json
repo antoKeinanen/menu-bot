@@ -2,6 +2,7 @@
   "name": "menu-bot",
   "module": "src/index.ts",
   "type": "module",
+  "version": "1.0.0",
   "scripts": {
     "start": "bun run src/index.ts"
   },
